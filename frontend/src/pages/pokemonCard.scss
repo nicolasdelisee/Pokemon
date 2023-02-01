@@ -1,0 +1,71 @@
+@import "../style.scss";
+
+.CardContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.PokemonCard {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border-radius: 20px;
+  &__emptyCard {
+    position: relative;
+  }
+  &__info {
+    position: absolute;
+    &__id {
+      font-family: $fontTitleCard;
+      font-size: $fontHeightCardId;
+      text-shadow: 3px 3px 5px yellow, -3px -3px 5px yellow;
+      position: absolute;
+      width: 50px;
+      top: 32px;
+      left: 30px;
+    }
+    &__name {
+      font-family: $fontTitleCard;
+      font-size: $fontHeightCardTitle;
+      text-shadow: 2px 2px 3px yellow, -2px -2px 3px yellow;
+
+      position: absolute;
+      top: 32px;
+      left: 135px;
+    }
+    &__photoContainer {
+      width: 302px;
+      height: 216px;
+      position: absolute;
+      top: 70px;
+      left: 48px;
+      background-color: white;
+      &__photo {
+        position: absolute;
+        left: 21px;
+        bottom: -10px;
+        width: 85%;
+        height: auto;
+      }
+    }
+    &__triviaTitle {
+      position: absolute;
+      top: 320px;
+      left: 70px;
+      font-family: $fontTitleCard;
+      text-shadow: 3px 3px 5px yellow, -3px -3px 5px yellow;
+      font-size: $fontHeightCardId;
+    }
+    &__trivia {
+      overflow: scroll;
+      position: absolute;
+      top: 340px;
+      width: 320px;
+      height: 125px;
+      left: 40px;
+      text-align: justify;
+    }
+    &__text {
+    }
+  }
+}

@@ -1,7 +1,7 @@
--- DROP TABLE IF EXISTS trainer_pokemon;
--- DROP TABLE IF EXISTS pokemon;
--- DROP TABLE IF EXISTS trainer;
--- DROP TABLE IF EXISTS trainer_type;
+DROP TABLE IF EXISTS trainer_pokemon;
+DROP TABLE IF EXISTS pokemon;
+DROP TABLE IF EXISTS trainer;
+DROP TABLE IF EXISTS trainer_type;
 
 CREATE TABLE pokedex.`type` (
 	id INT auto_increment NOT NULL,
@@ -87,6 +87,8 @@ INSERT INTO pokedex.pokemon (id_pokedex,name,photo,sprite,trivia,main_type,secon
 
 Bulbizarre utilise couramment la capacité Vampigraine qui est l''expulsion d''une graine parasitant l''ennemi par l''orifice de son bulbe ; et le Fouet Lianes qui est l''utilisation de tiges comme membres articulés pour frapper l''adversaire. Ces tiges sont d''ailleurs fréquemment utilisées pour manipuler des objets ou se porter lui-même en hauteur. Leur force est incroyable, il peut soulever des masses équivalentes à la sienne, voire plus grosses. ',NULL,NULL);
 
+INSERT INTO pokedex.trainer_pokemon (trainer_id,pokemon_id) VALUES
+	 (1,1);
 
 
 
