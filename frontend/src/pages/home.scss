@@ -1,0 +1,12 @@
+@import "../style.scss";
+
+.Home {
+  height: 90vh;
+  overflow: hidden;
+
+  &__image {
+    position: relative;
+    width: 100vw;
+    height: auto;
+  }
+}

@@ -3,9 +3,17 @@
   src: url("./assets/font/Kanit-Black.ttf");
 }
 
+@font-face {
+  font-family: Pokemon;
+  src: url("./assets/font/Pokemon Solid.ttf");
+}
+
 $fontTitleCard: Kanit;
+$fontTitleNavbar: Pokemon;
+
 $fontHeightCardId: 1.2rem;
 $fontHeightCardTitle: 1.4rem;
+$fontHeightNavbar: 1.6rem;
 
 :root {
   pointer-events: all;
