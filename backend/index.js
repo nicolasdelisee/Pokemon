@@ -1,8 +1,11 @@
 require("dotenv").config();
+const express = require("express");
 
 const app = require("./src/app");
 
-const port = parseInt(process.env.APP_PORT ?? "5000", 10);
+app.use(express.json());
+
+const port = parseInt(process.env.APP_PORT ?? "5001", 10);
 
 app.listen(port, (err) => {
   if (err) {
