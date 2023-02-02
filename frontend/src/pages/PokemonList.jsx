@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import PokemonCard from "./PokemonCard";
+import PokemonCard from "../components/PokemonCard";
+import TypeSelector from "../components/TypeSelector";
 
 function PokemonList() {
   const [getPokemon, setGetPokemon] = useState([]);
+  const [getType, setGetType] = useState([]);
+  const [selectedType, setSelectedType] = useState("");
 
   const getAllPokemon = () => {
     axios
@@ -13,14 +16,25 @@ function PokemonList() {
 
   useEffect(() => {
     getAllPokemon();
-  }, [getPokemon]);
+  }, []);
 
   return (
-    <div>
+    <div className="PokemonList">
+      <TypeSelector
+        getType={getType}
+        setGetType={setGetType}
+        setSelectedType={setSelectedType}
+      />
       <div className="CardContainer">
-        {getPokemon.map((pokemon) => (
-          <PokemonCard key={pokemon.id} pokemon={pokemon} />
-        ))}
+        {getPokemon
+          .filter(
+            (pokemon) =>
+              selectedType === "" ||
+              Number(selectedType) === Number(pokemon.main_type)
+          )
+          .map((pokemon) => (
+            <PokemonCard key={pokemon.id} pokemon={pokemon} />
+          ))}
       </div>
     </div>
   );

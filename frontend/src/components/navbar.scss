@@ -6,7 +6,9 @@
   display: flex;
   flex-direction: row;
   &__image {
-    height: 10vh;
+    height: 7vh;
+    margin-top: 1vh;
+    margin-left: 1vh;
   }
   &__liste {
     font-family: $fontTitleNavbar;
