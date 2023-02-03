@@ -16,4 +16,11 @@
     align-items: center;
     gap: 0.6vw;
   }
+  &__image {
+    width: 125px;
+    &:hover {
+      transform: scale(1.05);
+      transition: ease-in-out 0.2s;
+    }
+  }
 }

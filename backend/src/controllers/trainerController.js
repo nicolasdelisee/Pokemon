@@ -14,7 +14,7 @@ const trainerController = {
       .then((response) => response)
       .catch((err) => next(err));
   },
-  createTrainer: (req, res, next) => {
+  createTrainer: (req, res) => {
     const { name, photo, sprite, rival, trivia } = req.body;
     trainerModel
       .createOne({ name, photo, sprite, rival, trivia })
@@ -28,7 +28,6 @@ const trainerController = {
           trivia,
           message: "User created",
         });
-        return next();
       });
   },
 };

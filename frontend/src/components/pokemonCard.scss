@@ -12,6 +12,12 @@
   flex-direction: column;
   width: 400px;
   border-radius: 20px;
+  box-shadow: 2px 6px 6px 0px black;
+  border-radius: 20px;
+  &:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 0.2s;
+  }
   &__emptyCard {
     position: relative;
     border-radius: 19px;

@@ -1,0 +1,47 @@
+@import "../style.scss";
+
+.newTrainer {
+  height: 450px;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/pictures/newtrainer.png");
+  background-color: white;
+  background-position: center;
+  border-radius: 30px;
+  border: 5px solid pink;
+  box-shadow: 0px 0px 1000px 120px rgb(211, 135, 148);
+  &__form {
+    width: 500px;
+    position: relative;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & input {
+      border-radius: 10px;
+      border-color: pink;
+      height: 30px;
+      padding-left: 15px;
+    }
+    &__button {
+      width: 175px;
+      height: 50px;
+      margin-top: 30px;
+      border-radius: 15px;
+      background-color: pink;
+      box-shadow: 2px 3px 4px 0px rgb(104, 20, 121);
+    }
+    &__data {
+      width: 500px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+}

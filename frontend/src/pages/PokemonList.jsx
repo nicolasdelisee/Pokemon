@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PokemonCard from "../components/PokemonCard";
 import TypeSelector from "../components/TypeSelector";
+import "./pokemonList.scss";
 
 function PokemonList() {
   const [getPokemon, setGetPokemon] = useState([]);

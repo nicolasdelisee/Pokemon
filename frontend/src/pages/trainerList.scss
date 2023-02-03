@@ -3,7 +3,11 @@
 .TrainerList {
   display: flex;
   flex-direction: row;
+    background-image: url("../assets/pictures/wallpapertrainer.jpg");
+    background-position: center;
+    background-size: auto;
 }
+
 
 .TrainerModifier {
   width: 20vw;
@@ -12,10 +16,30 @@
   align-items: center;
   justify-content: flex-start;
   margin-top: 20vh;
+  
   &__add {
     font-family: $fontTitleCard;
     font-size: 1.3rem;
     height: 8vh;
     border-radius: 15px;
+  box-shadow: 2px 3px 3px 0px black;
+
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgb(255, 197, 182) 35%,
+      rgb(248, 4, 4) 100%
+    );
+    border: px solid red;
+    &:hover {
+      transform: scale(1.05);
+      transition: ease-in-out 0.2s;
+    }
+  }
+  &__update {
+    position: relative;
+    z-index: 1;
+    left: 40vw;
+    bottom: 20vh;
   }
 }

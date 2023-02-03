@@ -29,7 +29,7 @@ function TypeSelector({ getType, setGetType, setSelectedType }) {
             {...types}
             key={types.id}
             onClick={handleClick}
-            className="Type__image"
+            className="TypeSelector__image"
             src={types.image}
             alt={types.name}
           />
